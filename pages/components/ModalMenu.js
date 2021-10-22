@@ -3,7 +3,14 @@ import { motion } from "framer-motion";
 import Button from "./Button";
 import { Link as Anchor } from "react-scroll";
 
-export default function ModalMenu({ showMenu, setShowMenu, links, linkProps }) {
+export default function ModalMenu({ showMenu, setShowMenu, linkProps }) {
+  const links = [
+    { href: "home", text: "Home" },
+    { href: "features", text: "Features" },
+    { href: "about-us", text: "About Us" },
+    { href: "testimonials", text: "Testimonials" },
+    { href: "pricing", text: "Pricing" },
+  ];
   const cont = {
     show: {
       height: "calc(100vh - 92px)",

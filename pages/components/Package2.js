@@ -1,30 +1,15 @@
 import React, { useState, useRef } from "react";
 import Button from "./Button";
 
-export default function Package({}) {
+export default function Package2({}) {
   const details = {
-    name: "Monthly",
-    price: 99,
-    custom: false,
+    name: "Optional Custom App",
+    custom: true,
+    price: 1500,
     features: [
-      "Your own front end website for customers to order",
-      "Customers can place orders for your menu",
-      "Customers can receive push notifications for special offers etc",
-      "Customers can pay using credit card",
-      "Customers can enter coupon code for discounts on items",
-      "Customers can see how long until their order is ready",
-      "Customers can choose delivery or pick up options",
-      "Customers can click repeat previous orders made",
+      "You will get your own branded mobile app that allows customers to make orders, by downloading on the App Store and Play Store - and includes a seperate iPad version of the app to put in the kitchen to see orders and hear a sound.",
     ],
-    adminPanelFeatures: [
-      "Ability to add all of your menu items in the backend yourself",
-      "Manage your opening times",
-      "* Receive and see credit card payments integrated with Stripe",
-      "Adjust pricing and availability of orders in the system",
-      "Send push notifications to all customers for specials or general news",
-      "Add special items on your menu etc which show in a special category",
-      "Change order statuses and notify customers when order is ready etc",
-    ],
+    adminPanelFeatures: [""],
   };
   const [setActive, setActiveState] = useState("");
   const [setHeight, setHeightState] = useState("0px");
