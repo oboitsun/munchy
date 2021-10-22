@@ -1,16 +1,86 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.custom-grid {
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+}
+@media (min-width: 1280px) {
+  .custom-grid {
+    grid-template-columns: 1px 1fr 1px 1fr 1px 1fr 1px;
+  }
 }
 
-* {
+.inputStyle {
+  appearance: none;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
   box-sizing: border-box;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.carousel .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 40px;
+  height: 10px;
+  border-radius: 3px;
+  background: #ededed;
+  border-radius: 10px;
+}
+.carousel .swiper-pagination-bullet-active {
+  background-color: #f15d22;
+}
+
+.carousel .swiper-button-next::after,
+.carousel .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: 700;
+}
+.carousel .swiper-button-next {
+  top: 48%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #f15d22;
+}
+.carousel .swiper-button-prev {
+  top: 48%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #f15d22;
+}
+
+.mob.carousel .swiper-button-prev {
+  top: 48%;
+  left: 40px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.mob.carousel .swiper-button-next {
+  top: 48%;
+  right: 40px;
+  transform: translateX(50%) translateY(-50%);
+}
+.swpr-button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.swpr-prev {
+  left: -50px;
+}
+.swpr-next {
+  right: -50px;
+}
+.shdw-crmsn {
+  box-shadow: 0 0 0 2px #f15d22;
+}
+.shdw-grey {
+  box-shadow: 0 0 0 2px #d4d4d4;
 }
