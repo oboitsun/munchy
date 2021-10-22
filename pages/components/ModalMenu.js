@@ -43,7 +43,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
       variants={cont}
       initial="hidden"
       animate={showMenu ? "show" : "hidden"}
-      className="bg-drkGray w-full z-20 fixed h-screen top-0 bottom-0 px-10 py-10   lg:hidden pt-[92px]"
+      className="bg-drkGray w-full z-20 fixed h-screen top-0 bottom-0 px-10 py-10   lg:hidden pt-[122px]"
     >
       {links.map((l, i) => (
         <motion.div key={i} variants={item} className="text-3xl mb-5">
