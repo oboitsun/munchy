@@ -5,15 +5,15 @@ import ModalMenu from "./ModalMenu";
 import { Link as Anchor } from "react-scroll";
 import Button from "./Button";
 
-const links = [
-  { href: "home", text: "Home" },
-  { href: "features", text: "Features" },
-  { href: "about-us", text: "About Us" },
-  { href: "testimonials", text: "Testimonials" },
-  { href: "pricing", text: "Pricing" },
-];
-
 export default function Header({ showMenu, setShowMenu }) {
+  const links = [
+    { href: "home", text: "Home" },
+    { href: "features", text: "Features" },
+    { href: "about-us", text: "About Us" },
+    { href: "testimonials", text: "Testimonials" },
+    { href: "pricing", text: "Pricing" },
+  ];
+
   const linkProps = {
     spy: true,
     smooth: true,
