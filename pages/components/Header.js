@@ -25,10 +25,10 @@ export default function Header({ showMenu, setShowMenu }) {
   return (
     <div className="w-full flex flex-col  items-center  fixed top-0 left-0 z-30  h-[92px] overflow-hidden ">
       <div className="w-full  py-[30px] px-10 lg:px-0 relative  bg-lghtGray">
-        <div className="max-w-864 xl:max-w-1080 mx-auto justify-between flex">
+        <div className="max-w-864 xl:max-w-1080 mx-auto justify-between flex items-center">
           <Logo />
           <Burger showMenu={showMenu} setShowMenu={setShowMenu} />
-          <div className="hidden lg:flex text-xs xl:text-base font-bold gap-8 xl:gap-10 items-center">
+          <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-8 xl:gap-10 items-center">
             {links.map((l, i) => (
               <Anchor key={i} to={l.href} {...linkProps}>
                 {l.text}

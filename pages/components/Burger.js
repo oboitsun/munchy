@@ -26,7 +26,7 @@ const Burger = ({ setShowMenu, showMenu }) => {
       onClick={() => {
         setShowMenu(!showMenu);
       }}
-      className={`text-crmsn fill-current relative z-30 w-7 h-5  cursor-pointer lg:hidden `}
+      className={`text-crmsn fill-current  w-7 h-5  cursor-pointer lg:hidden `}
       viewBox="0 0 23 23"
     >
       <Path
