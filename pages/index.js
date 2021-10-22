@@ -9,6 +9,7 @@ import Examples from "./components/Examples";
 import Testimonials from "./components/Testimonials";
 import Packages from "./components/Packages";
 import Footer from "./components/Footer";
+import ModalMenu from "./components/ModalMenu";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
       <Testimonials />
       <Packages />
       <Footer />
+      <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   );
 }

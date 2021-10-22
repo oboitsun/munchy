@@ -38,13 +38,6 @@ export default function Header({ showMenu, setShowMenu }) {
           </div>
         </div>
       </div>
-
-      <ModalMenu
-        links={links}
-        linkProps={linkProps}
-        showMenu={showMenu}
-        setShowMenu={setShowMenu}
-      />
     </div>
   );
 }

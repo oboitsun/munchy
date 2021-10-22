@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Button from "./Button";
 import { Link as Anchor } from "react-scroll";
 
-export default function ModalMenu({ showMenu, setShowMenu, linkProps }) {
+export default function ModalMenu({ showMenu, setShowMenu }) {
   const links = [
     { href: "home", text: "Home" },
     { href: "features", text: "Features" },
@@ -11,6 +11,14 @@ export default function ModalMenu({ showMenu, setShowMenu, linkProps }) {
     { href: "testimonials", text: "Testimonials" },
     { href: "pricing", text: "Pricing" },
   ];
+  const linkProps = {
+    spy: true,
+    smooth: true,
+    offset: -100,
+    duration: 500,
+    activeClass: "active",
+    className: "cursor-pointer text-white font-bold lg:text-grey ",
+  };
   const cont = {
     show: {
       height: "calc(100vh - 92px)",
@@ -35,7 +43,7 @@ export default function ModalMenu({ showMenu, setShowMenu, linkProps }) {
       variants={cont}
       initial="hidden"
       animate={showMenu ? "show" : "hidden"}
-      className="bg-drkGray w-full h-[calc(100vh-90px)] relative z-10 px-10 py-10   lg:hidden"
+      className="bg-drkGray w-full z-20 fixed h-screen top-0 left-0 px-10 py-10   lg:hidden"
     >
       {links.map((l, i) => (
         <motion.div key={i} variants={item} className="text-3xl mb-5">
