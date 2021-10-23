@@ -1,15 +1,30 @@
 import React, { useState, useRef } from "react";
 import Button from "./Button";
 
-export default function Package2({}) {
+export default function Package({}) {
   const details = {
-    name: "Optional Custom App",
-    custom: true,
-    price: 1500,
+    name: "Monthly",
+    price: 99,
+    custom: false,
     features: [
-      "You will get your own branded mobile app that allows customers to make orders, by downloading on the App Store and Play Store - and includes a seperate iPad version of the app to put in the kitchen to see orders and hear a sound.",
+      "Your own front end website for customers to order",
+      "Customers can place orders for your menu",
+      "Customers can receive push notifications for special offers etc",
+      "Customers can pay using credit card",
+      "Customers can enter coupon code for discounts on items",
+      "Customers can see how long until their order is ready",
+      "Customers can choose delivery or pick up options",
+      "Customers can click repeat previous orders made",
     ],
-    adminPanelFeatures: [""],
+    adminPanelFeatures: [
+      "Ability to add all of your menu items in the backend yourself",
+      "Manage your opening times",
+      "* Receive and see credit card payments integrated with Stripe",
+      "Adjust pricing and availability of orders in the system",
+      "Send push notifications to all customers for specials or general news",
+      "Add special items on your menu etc which show in a special category",
+      "Change order statuses and notify customers when order is ready etc",
+    ],
   };
   const [setActive, setActiveState] = useState("");
   const [setHeight, setHeightState] = useState("0px");
@@ -90,15 +105,7 @@ export default function Package2({}) {
           </>
         )}
 
-        <Button
-          full
-          text="choose plan"
-          addClass={
-            details?.custom
-              ? "mt-6 border-2 border-crmsn bg-white text-crmsn box-content hover:bg-crmsn hover:text-white transition-all duration-500"
-              : "mt-6 border-2 border-crmsn text-white box-content transition-all duration-500 hover:bg-white hover:text-crmsn"
-          }
-        />
+        <Button type="filled" text="choose plan" addClass={"mt-6 "} />
       </div>
     </div>
   );

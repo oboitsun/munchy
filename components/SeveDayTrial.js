@@ -14,10 +14,7 @@ export default function SeveDayTrial() {
           to a subscription
         </p>
         <div className="min-w-max">
-          <Button
-            addClass="border-2 border-white px-4 max-w-max "
-            text="start trial now"
-          />
+          <Button type="outlined" addClass=" max-w-max " text="start trial now" />
         </div>
       </div>
     </div>
