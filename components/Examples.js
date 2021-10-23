@@ -87,9 +87,14 @@ export default function Examples() {
             key={i}
             className={`relative ${i > 5 && "lg:block hidden"} ${
               tile.cls
-            } w-full rounded-[10px] overflow-hidden `}
+            } w-full rounded-[10px] overflow-hidden group `}
           >
-            <Image src={tile.imgSrc} layout="fill" alt="tile" />
+            <Image
+              className="group-hover:scale-125  transform transition duration-500-transform z-0"
+              src={tile.imgSrc}
+              layout="fill"
+              alt="tile"
+            />
           </motion.div>
         ))}
       </motion.div>
